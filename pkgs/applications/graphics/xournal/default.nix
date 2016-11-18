@@ -21,6 +21,21 @@ stdenv.mkDerivation rec {
 
   NIX_LDFLAGS = [ "-lX11" "-lz" ];
 
+  postInstall=''
+      mkdir --parents $out/share/applications
+      cat << EOF > $out/share/applications/syncthing.desktop
+      [Desktop Entry]
+      Name=Xournal
+      GenericName=PDF Editor
+      Comment=Sketch or take notes with a stylus
+      Exec=xournal
+      Icon=$out/share/xournal/pixmaps/xournal.png
+      Terminal=false
+      Type=Application
+      StartupNotify=false
+      EOF
+  '';
+
   meta = {
     homepage = http://xournal.sourceforge.net/;
     description = "Note-taking application (supposes stylus)";
