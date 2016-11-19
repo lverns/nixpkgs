@@ -33,6 +33,7 @@ stdenv.mkDerivation rec {
       Terminal=false
       Type=Application
       StartupNotify=false
+      Categories=Office;Graphics;
       EOF
       mkdir --parents $out/share/mime/packages
       cat << EOF > $out/share/mime/packages/xournal.xml
