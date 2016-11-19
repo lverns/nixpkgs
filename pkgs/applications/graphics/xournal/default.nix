@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
 
   postInstall=''
       mkdir --parents $out/share/applications
-      cat << EOF > $out/share/applications/syncthing.desktop
+      cat << EOF > $out/share/applications/xournal.desktop
       [Desktop Entry]
       Name=Xournal
       GenericName=PDF Editor
