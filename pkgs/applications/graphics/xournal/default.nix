@@ -34,6 +34,15 @@ stdenv.mkDerivation rec {
       Type=Application
       StartupNotify=false
       EOF
+      mkdir --parents $out/share/mime/packages
+      cat << EOF > $out/share/mime/packages/xournal.xml
+      <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+         <mime-type type="text/x-xoj">
+          <comment>Xournal Document</comment>
+          <glob pattern="*.xoj"/>
+         </mime-type>
+      </mime-info>
+      EOF
   '';
 
   meta = {
