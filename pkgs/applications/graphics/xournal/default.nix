@@ -34,6 +34,7 @@ stdenv.mkDerivation rec {
       Type=Application
       StartupNotify=false
       Categories=Office;Graphics;
+      MimeType=application/pdf;application/x-xoj
       EOF
       mkdir --parents $out/share/mime/packages
       cat << EOF > $out/share/mime/packages/xournal.xml
