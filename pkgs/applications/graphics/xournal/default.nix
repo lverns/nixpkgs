@@ -38,7 +38,7 @@ stdenv.mkDerivation rec {
       mkdir --parents $out/share/mime/packages
       cat << EOF > $out/share/mime/packages/xournal.xml
       <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
-         <mime-type type="text/x-xoj">
+         <mime-type type="application/x-xoj">
           <comment>Xournal Document</comment>
           <glob pattern="*.xoj"/>
          </mime-type>
