@@ -32,7 +32,6 @@ stdenv.mkDerivation rec {
       Icon=$out/share/xournal/pixmaps/xournal.png
       Terminal=false
       Type=Application
-      StartupNotify=false
       Categories=Office;Graphics;
       MimeType=application/pdf;application/x-xoj
       EOF
