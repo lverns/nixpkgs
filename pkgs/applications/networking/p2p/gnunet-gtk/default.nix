@@ -1,11 +1,11 @@
 { stdenv, fetchurl, libextractor, gnunet, gtk3, glade, pkgconfig, libxml2 }:
 
 stdenv.mkDerivation rec {
-  name = "gnunet-gtk";
   version = "0.10.1";
+  name = "gnunet-gtk-${version}";
 
   src = fetchurl {
-    url = "http://ftpmirror.gnu.org/gnunet/gnunet-gtk-0.10.1.tar.gz";
+    url = "http://ftpmirror.gnu.org/gnunet/${name}.tar.gz";
     sha256 = "8fac6aa405a0cca149b3ca373c0d80a932dff20f8e1d959863d50965749868dc";
   };
 
