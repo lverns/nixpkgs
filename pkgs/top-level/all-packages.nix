@@ -14134,6 +14134,10 @@ with pkgs;
   gnumeric = callPackage ../applications/office/gnumeric { };
 
   gnunet = callPackage ../applications/networking/p2p/gnunet { };
+  gnunet-gtk = callPackage ../applications/networking/p2p/gnunet-gtk
+  {
+    inherit (gnome3) glade;
+  };
 
   gnunet_svn = lowPrio (callPackage ../applications/networking/p2p/gnunet/svn.nix { });
 
