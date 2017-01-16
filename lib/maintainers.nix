@@ -298,6 +298,7 @@
   ludo = "Ludovic Courtès <ludo@gnu.org>";
   luispedro = "Luis Pedro Coelho <luis@luispedro.org>";
   lukego = "Luke Gorrie <luke@snabb.co>";
+  lverns = "Laverne Schrock <laverne@schrock.email>";
   lw = "Sergey Sofeychuk <lw@fmap.me>";
   m3tti = "Mathaeus Sander <mathaeus.peter.sander@gmail.com>";
   ma27 = "Maximilian Bosch <maximilian@mbosch.me>";
