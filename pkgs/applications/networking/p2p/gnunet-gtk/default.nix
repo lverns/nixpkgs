@@ -13,6 +13,10 @@ stdenv.mkDerivation rec {
     libextractor gtk3 glade gnunet pkgconfig libxml2
   ];
 
+  # configureFlags = [
+  #   "--with-gnunet=${gnunet}"
+  # ];
+
   meta = with stdenv.lib; {
     description = "GTK interfaces for GNU's decentralized anonymous and censorship-resistant P2P framework";
     license = licenses.gpl3;
