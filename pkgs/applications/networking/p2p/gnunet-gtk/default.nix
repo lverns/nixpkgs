@@ -1,4 +1,6 @@
-{ stdenv, fetchurl, libextractor, gnunet, gtk3, glade, pkgconfig, libxml2, libunique3, qrencode }:
+{ stdenv, fetchurl, libextractor, gnunet, gtk3, glade, pkgconfig, libxml2, libunique3, qrencode
+  ,autoconf, gettext, automake, libtool # random stuff?
+}:
 
 stdenv.mkDerivation rec {
   version = "0.10.1";
@@ -11,6 +13,7 @@ stdenv.mkDerivation rec {
 
   buildInputs = [
     libextractor gtk3 glade gnunet pkgconfig libxml2 libunique3 qrencode
+    autoconf gettext automake libtool # random stuff?
   ];
 
   configureFlags = [
