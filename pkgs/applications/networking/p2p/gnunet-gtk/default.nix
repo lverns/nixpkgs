@@ -13,9 +13,11 @@ stdenv.mkDerivation rec {
     libextractor gtk3 glade gnunet pkgconfig libxml2 libunique3 qrencode
   ];
 
-  # configureFlags = [
-  #   "--with-gnunet=${gnunet}"
-  # ];
+  configureFlags = [
+    "--with-gnunet=${gnunet}"
+    "--with-libunique"
+    "--with-qrencode"
+  ];
 
   meta = with stdenv.lib; {
     description = "GTK interfaces for GNU's decentralized anonymous and censorship-resistant P2P framework";
