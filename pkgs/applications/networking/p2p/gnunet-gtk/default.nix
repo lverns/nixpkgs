@@ -16,11 +16,21 @@ stdenv.mkDerivation rec {
     autoconf gettext automake libtool # random stuff?
   ];
 
+  # This just breaks things if un-commented
+  # preConfigure  = ''
+  #   autoreconf -vfi
+  # '';
+
   configureFlags = [
     "--with-gnunet=${gnunet}"
     "--with-libunique"
     "--with-qrencode"
   ];
+
+  # Toggling these doesn't seem to change the build
+  # dontAddDisableDepTrack = true;
+  # dontFixLibtool = true;
+  # dontDisableStatic = true;
 
   meta = with stdenv.lib; {
     description = "GTK interfaces for GNU's decentralized anonymous and censorship-resistant P2P framework";
