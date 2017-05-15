@@ -1,5 +1,5 @@
 { stdenv, fetchurl, libextractor, gnunet, gtk3, glade, pkgconfig, libxml2, libunique3, qrencode
-  ,autoconf, gettext, automake, libtool # random stuff?
+  ,libgcrypt, autoconf, gettext, automake, libtool # random stuff?
 }:
 
 stdenv.mkDerivation rec {
@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
   };
 
   buildInputs = [
-    libextractor gtk3 glade gnunet pkgconfig libxml2 libunique3 qrencode
+    libextractor gtk3 glade gnunet pkgconfig libxml2 libunique3 qrencode libgcrypt
     autoconf gettext automake libtool # random stuff?
   ];
 
