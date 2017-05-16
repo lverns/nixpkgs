@@ -27,6 +27,10 @@ stdenv.mkDerivation rec {
     "--with-qrencode"
   ];
 
+  postConfigure = ''
+    patchShebangs pixmaps
+  '';
+
   # Toggling these doesn't seem to change the build
   # dontAddDisableDepTrack = true;
   # dontFixLibtool = true;
