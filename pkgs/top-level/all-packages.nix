@@ -14472,6 +14472,8 @@ with pkgs;
 
   gnunet_svn = lowPrio (callPackage ../applications/networking/p2p/gnunet/svn.nix { });
 
+  gnunet-HEAD = lowPrio (callPackage ../applications/networking/p2p/gnunet/git.nix { });
+
   gocr = callPackage ../applications/graphics/gocr { };
 
   gobby5 = callPackage ../applications/editors/gobby {
