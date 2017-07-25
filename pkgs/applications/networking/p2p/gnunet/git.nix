@@ -21,6 +21,9 @@ stdenv.mkDerivation rec {
   ];
 
   preConfigure = ''
+    # create the configure script
+    ./bootstrap
+
     # Brute force: since nix-worker chroots don't provide
     # /etc/{resolv.conf,hosts}, replace all references to `localhost'
     # by their IPv4 equivalent.
@@ -34,11 +37,6 @@ stdenv.mkDerivation rec {
 
     # Ensure NSS installation works fine
     configureFlags="$configureFlags --with-nssdir=$out/lib"
-    patchShebangs src/gns/nss/install-nss-plugin.sh
-
-    sed -ie 's|@LDFLAGS@|@LDFLAGS@ $(Z_LIBS)|g' \
-      src/regex/Makefile.in \
-      src/fs/Makefile.in
   '';
 
   doCheck = false;
