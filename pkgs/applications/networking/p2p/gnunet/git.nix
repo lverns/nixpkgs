@@ -1,7 +1,8 @@
 { stdenv, fetchurl, adns, curl, gettext, gmp, gnutls, libextractor
 , libgcrypt, libgnurl, libidn, libmicrohttpd, libtool, libunistring
 , makeWrapper, ncurses, pkgconfig, libxml2, sqlite, zlib
-, libpulseaudio, libopus, libogg, fetchgit }:
+, libpulseaudio, libopus, libogg, fetchgit, autoconf, automake
+, libpsl, openldap, gss  }:
 
 stdenv.mkDerivation rec {
   name = "gnunet-HEAD";
@@ -15,7 +16,8 @@ stdenv.mkDerivation rec {
   buildInputs = [
     adns curl gettext gmp gnutls libextractor libgcrypt libgnurl libidn
     libmicrohttpd libtool libunistring libxml2 makeWrapper ncurses
-    pkgconfig sqlite zlib libpulseaudio libopus libogg
+    pkgconfig sqlite zlib libpulseaudio libopus libogg autoconf automake
+    libpsl openldap gss
   ];
 
   preConfigure = ''
